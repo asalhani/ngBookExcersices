@@ -9,19 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var article_1 = require('./article');
 var RedditComponent = (function () {
     function RedditComponent() {
-        this.name = "adib";
-        this.names = ["Ari", "Carlos", "Felipe", "Nate"];
+        this.myArticle = new article_1.Article("title", "link", 8);
+        this.articles = [
+            new article_1.Article('Angular 2', 'http://angular.io', 3),
+            new article_1.Article('Fullstack', 'http://fullstack.io', 2),
+            new article_1.Article('Angular Homepage', 'http://angular.io', 1),
+        ];
     }
+    RedditComponent.prototype.sortedArticles = function () {
+        return this.articles.sort(function (a, b) { return b.votes - a.votes; });
+    };
     RedditComponent.prototype.addArticle = function (newTitle, newLink) {
+        this.articles.push(new article_1.Article(newTitle.value, newLink.value, 0));
+        newTitle.value = '';
+        newLink.value = '';
         console.log(newTitle.value + " - " + newLink.value);
         return false;
     };
     RedditComponent = __decorate([
         core_1.Component({
             selector: 'reddit',
-            templateUrl: './app/reddit.component.html'
+            templateUrl: './app/reddit.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], RedditComponent);

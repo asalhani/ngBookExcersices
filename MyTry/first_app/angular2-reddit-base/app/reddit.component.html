@@ -1,6 +1,5 @@
 <form class="ui large form segment">
     <h3 class="ui header">Add a Link</h3>
-
     <div class="field">
         <label for="title">Title:</label>
         <input name="title" #newTitle>
@@ -13,4 +12,7 @@
     Submit link
     </button>
 </form>
-<reddit-article></reddit-article>
+<div class="ui grid posts">
+    <reddit-article *ngFor="let a of sortedArticles()" 
+                    [article]="a"></reddit-article>
+</div>

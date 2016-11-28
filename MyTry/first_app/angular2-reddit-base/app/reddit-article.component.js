@@ -9,24 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var article_1 = require('./article');
 var ArticleComponent = (function () {
     function ArticleComponent() {
-        this.title = "Angular 2";
-        this.link = "http://angular.io";
-        this.votes = 10;
+        // this.article = new Article("Angular 1", "http://angular.io", 10);
     }
     ArticleComponent.prototype.voteUp = function () {
-        this.votes++;
+        this.article.voteUp();
         return false;
     };
     ArticleComponent.prototype.voteDown = function () {
-        this.votes--;
+        this.article.voteDown();
         return false;
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', article_1.Article)
+    ], ArticleComponent.prototype, "article", void 0);
     ArticleComponent = __decorate([
         core_1.Component({
             selector: "reddit-article",
             templateUrl: "./app/reddit-article.component.html",
+            // inputs:['article'],
             //This tells Angular that on the host element 
             //(the reddit-article tag) we want to set the class attribute to have “row”.
             host: { class: "row" }
