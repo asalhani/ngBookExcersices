@@ -12,12 +12,13 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var reddit_component_1 = require('./reddit.component');
+var reddit_article_component_1 = require('./reddit-article.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [reddit_component_1.RedditComponent],
+            declarations: [reddit_component_1.RedditComponent, reddit_article_component_1.ArticleComponent],
             imports: [platform_browser_1.BrowserModule],
             bootstrap: [reddit_component_1.RedditComponent],
         }), 

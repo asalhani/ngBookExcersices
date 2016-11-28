@@ -4,11 +4,12 @@ import {
 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import {RedditComponent} from './reddit.component'
+import {RedditComponent} from './reddit.component';
+import {ArticleComponent} from './reddit-article.component';
 
 
 @NgModule({
-    declarations: [RedditComponent],
+    declarations: [RedditComponent, ArticleComponent],
     imports: [BrowserModule],
     bootstrap: [RedditComponent],
 })
