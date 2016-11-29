@@ -9,12 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_1 = require('./product');
 var InventoryComponent = (function () {
     function InventoryComponent() {
+        this.products = [
+            new product_1.Product('MYSHOES', 'Black Running Shoes', '/resources/images/products/black-shoes.jpg', ['Men', 'Shoes', 'Running Shoes'], 109.99),
+            new product_1.Product('NEATOJACKET', 'Blue Jacket', '/resources/images/products/blue-jacket.jpg', ['Women', 'Apparel', 'Jackets & Vests'], 238.99),
+            new product_1.Product('NICEHAT', 'A Nice Black Hat', 'resources/images/products/black-hat.jpg', ['Men', 'Accessories', 'Hats'], 29.99)
+        ];
     }
+    InventoryComponent.prototype.productWasSelected = function (product) {
+        console.log('Product clicked:', product);
+    };
     InventoryComponent = __decorate([
         core_1.Component({
-            selector: 'inventory',
+            selector: 'inventory-app',
             templateUrl: './app/inventory.component.html',
         }), 
         __metadata('design:paramtypes', [])

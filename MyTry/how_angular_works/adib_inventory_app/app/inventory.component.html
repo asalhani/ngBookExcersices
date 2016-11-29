@@ -1,1 +1,6 @@
-this is the invetory component page
+<div class="invenotry-app">
+    
+    <product-list [productList]='products'
+                  (onProductSelected)='productWasSelected($event)'>
+    </product-list>
+</div>
