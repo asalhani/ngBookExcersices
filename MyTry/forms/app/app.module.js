@@ -9,16 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var app_component_1 = require('./app.component');
+var sku_form_component_1 = require('./sku-form.component');
+// demo compoents
+var demo_form_binding_component_1 = require('./demo-form-binding.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent],
-            imports: [platform_browser_1.BrowserModule],
+            declarations: [app_component_1.AppComponent, sku_form_component_1.SkuFormComponent, demo_form_binding_component_1.DemoFormBindingComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
             bootstrap: [app_component_1.AppComponent],
         }), 
         __metadata('design:paramtypes', [])

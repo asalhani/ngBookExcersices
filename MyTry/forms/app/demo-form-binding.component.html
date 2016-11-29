@@ -1,0 +1,11 @@
+<form #myForm='ngForm' (ngSubmit)='onSubmit()'>
+    <div>
+        <label for='customerName'>Name</label>
+        <input type='text' id='customerName' 
+               ngControl='name' name='customerName'
+               [(ngModel)]='newContact.name'>
+    </div>
+</form>
+<div *ngIf='newContact'>
+    {{newContact | json}}
+</div>
