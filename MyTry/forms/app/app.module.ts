@@ -12,8 +12,10 @@ import { AppComponent } from './app.component';
 import {TemplateFormComponent} from './template-form.component'
 import {TemplateFormV2Component} from './template-form_v2.component'
 
+import {ModelFormComponent} from './model-form.component'
+
 @NgModule({
-    declarations: [AppComponent, TemplateFormComponent, TemplateFormV2Component],
+    declarations: [AppComponent, TemplateFormComponent, TemplateFormV2Component, ModelFormComponent],
     imports: [BrowserModule, FormsModule, ReactiveFormsModule],
     bootstrap: [AppComponent],
 })

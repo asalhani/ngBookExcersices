@@ -16,12 +16,13 @@ var app_component_1 = require('./app.component');
 // demo compoents
 var template_form_component_1 = require('./template-form.component');
 var template_form_v2_component_1 = require('./template-form_v2.component');
+var model_form_component_1 = require('./model-form.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent, template_form_component_1.TemplateFormComponent, template_form_v2_component_1.TemplateFormV2Component],
+            declarations: [app_component_1.AppComponent, template_form_component_1.TemplateFormComponent, template_form_v2_component_1.TemplateFormV2Component, model_form_component_1.ModelFormComponent],
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
             bootstrap: [app_component_1.AppComponent],
         }), 
