@@ -13,15 +13,14 @@ var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var app_component_1 = require('./app.component');
-var sku_form_component_1 = require('./sku-form.component');
 // demo compoents
-var demo_form_binding_component_1 = require('./demo-form-binding.component');
+var template_form_component_1 = require('./template-form.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent, sku_form_component_1.SkuFormComponent, demo_form_binding_component_1.DemoFormBindingComponent],
+            declarations: [app_component_1.AppComponent, template_form_component_1.TemplateFormComponent],
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
             bootstrap: [app_component_1.AppComponent],
         }), 

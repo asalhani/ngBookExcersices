@@ -7,13 +7,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
 import { AppComponent } from './app.component';
-import { SkuFormComponent } from './sku-form.component';
 
 // demo compoents
-import {DemoFormBindingComponent} from './demo-form-binding.component'
+import {TemplateFormComponent} from './template-form.component'
 
 @NgModule({
-    declarations: [AppComponent, SkuFormComponent, DemoFormBindingComponent],
+    declarations: [AppComponent, TemplateFormComponent],
     imports: [BrowserModule, FormsModule, ReactiveFormsModule],
     bootstrap: [AppComponent],
 })

@@ -9,17 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var SkuFormComponent = (function () {
-    function SkuFormComponent() {
+var contact_1 = require('./contact');
+var TemplateFormComponent = (function () {
+    function TemplateFormComponent() {
     }
-    SkuFormComponent = __decorate([
+    TemplateFormComponent.prototype.onSubmit = function () {
+        return false;
+    };
+    TemplateFormComponent.prototype.ngOnInit = function () {
+        this.newContact =
+            new contact_1.Contact('', '', '', 0);
+    };
+    TemplateFormComponent = __decorate([
         core_1.Component({
-            selector: 'sku-form',
-            templateUrl: './app/sku-form.component.html'
+            selector: 'two-way-binding-form',
+            templateUrl: './app/template-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], SkuFormComponent);
-    return SkuFormComponent;
+    ], TemplateFormComponent);
+    return TemplateFormComponent;
 }());
-exports.SkuFormComponent = SkuFormComponent;
-//# sourceMappingURL=sku-form.component.js.map
+exports.TemplateFormComponent = TemplateFormComponent;
+//# sourceMappingURL=template-form.component.js.map

@@ -3,9 +3,9 @@ import {Contact} from './contact';
 
 @Component({
     selector:'two-way-binding-form',
-    templateUrl: './app/demo-form-binding.component.html'
+    templateUrl: './app/template-form.component.html'
 })
-export class DemoFormBindingComponent implements OnInit{
+export class TemplateFormComponent implements OnInit{
 
         newContact:Contact;
 
