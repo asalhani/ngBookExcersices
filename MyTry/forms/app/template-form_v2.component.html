@@ -1,0 +1,32 @@
+<!--
+    https://toddmotto.com/angular-2-forms-template-driven?utm_source=javascriptweekly&utm_medium=email#high-level-terminology
+-->
+<form #userForm="ngForm"  (ngSubmit)="submitUser(userForm)" novalidate>
+    <div class="form-group">
+        <span>Full name</span>
+        <input type="text" 
+                name="name" 
+                [ngModel]="user.name"
+                 placeholder="Your full name"
+                 required>
+    </div>
+    <div ngModelGroup="account">
+        <div class="form-group">
+            <span>Email address</span>
+            <input type="email"
+                    name="email"
+                    placeholder="Your email address"
+                    required>
+        </div>
+        <div class="form-group">
+            <span>Confirm address</span>
+            <input type="email"
+                    name="confirm"
+                    placeholder="Confirm your email address"
+                    required>
+        </div>
+    </div>
+    <button class="btn btn-default"
+    [disabled]="userForm.invalid"
+     type="submit">Sign up</button>
+</form>
