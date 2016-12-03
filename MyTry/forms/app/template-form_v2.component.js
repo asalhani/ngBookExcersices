@@ -12,20 +12,15 @@ var core_1 = require('@angular/core');
 var TemplateFormV2Component = (function () {
     function TemplateFormV2Component() {
         this.user = {
-            name: 'adib',
+            name: '',
             account: {
                 email: '',
                 confirm: ''
             }
         };
     }
-    /*
-        Here we’re using Object destructuring to fetch the value and valid properties from
-        that #f reference we exported and passed into onSubmit.
-    */
-    TemplateFormV2Component.prototype.submitUser = function (_a) {
-        var value = _a.value, valid = _a.valid;
-        console.log(value, valid);
+    TemplateFormV2Component.prototype.submitUser = function (form) {
+        console.log(form.value, form.valid);
     };
     TemplateFormV2Component = __decorate([
         core_1.Component({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms'
 import { Contact } from './contact';
 import { User } from './user'
 
@@ -8,18 +9,13 @@ import { User } from './user'
 })
 export class TemplateFormV2Component {
     user: User = {
-        name: 'adib',
+        name: '',
         account: {
             email: '',
             confirm: ''
         }
     };
-
-    /*
-        Here we’re using Object destructuring to fetch the value and valid properties from 
-        that #f reference we exported and passed into onSubmit.
-    */
-    submitUser({ value, valid }: { value: User, valid: boolean }) {
-    console.log(value, valid);
-  }
+    submitUser(form:NgForm){
+        console.log(form.value, form.valid);
+    }
 }
