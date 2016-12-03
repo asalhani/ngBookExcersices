@@ -8,6 +8,16 @@ import {Contact} from './contact';
 export class TemplateFormComponent implements OnInit{
 
         newContact:Contact;
+        formValue:any;
+
+        firstName:string;
+        lastName:string;
+
+        submitContact(value:any):void{
+            console.log("fistName value from Component: " + this.firstName);
+            this.formValue = value;
+            console.log(value);
+        }
 
         onSubmit():boolean{
             return false;

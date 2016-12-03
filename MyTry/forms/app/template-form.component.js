@@ -13,6 +13,11 @@ var contact_1 = require('./contact');
 var TemplateFormComponent = (function () {
     function TemplateFormComponent() {
     }
+    TemplateFormComponent.prototype.submitContact = function (value) {
+        console.log("fistName value from Component: " + this.firstName);
+        this.formValue = value;
+        console.log(value);
+    };
     TemplateFormComponent.prototype.onSubmit = function () {
         return false;
     };
