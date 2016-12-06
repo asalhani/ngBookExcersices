@@ -1,24 +1,22 @@
-<!-- http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html -->
-<form>
-    <div class="form-group">
-        <label>Firstname:</label>
-        <input type="text" class="form-control">
+<!-- https://scotch.io/tutorials/using-angular-2s-model-driven-forms-with-formgroup-and-formcontrol#initialize-the-form-model -->
+<h1> form model sample </h1>
+<form [formGroup]="myForm" (ngSubmit)="save(myForm.value, myForm.valid)">
+    <div>
+        <label>Name</label>
+           <input type="text" 
+           formControlName="name">
+           <small [hidden]="myForm.controls.name.valid || 
+           (myForm.controls.name.pristine && !submitted)"> Name is required (minimum 5 characters).</small>
+
+          <div formGroupName="address">
+              <label>Street</label>
+              <input type="text" formControlName="street">
+             <small [hidden]="myForm.controls.address.controls.street.valid || (myForm.controls.address.controls.street.pristine && !submitted)">
+                  Street is required
+              </small>
+          </div>
     </div>
-    <div class="form-group">
-        <label>Lastname:</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>Street:</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>Zip:</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <label>City:</label>
-        <input type="text" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    
+    
+    <button type="submit">Submit</button>
 </form>

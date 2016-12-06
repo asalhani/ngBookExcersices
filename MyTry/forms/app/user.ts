@@ -3,5 +3,9 @@ export interface User {
   account: {
     email: string;
     confirm: string;
+  },
+  address?: {
+    street?: string; // required
+    postcode?: string;
   }
 }
