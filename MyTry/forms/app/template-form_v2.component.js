@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var TemplateFormV2Component = (function () {
     function TemplateFormV2Component() {
         this.user = {
@@ -22,14 +22,14 @@ var TemplateFormV2Component = (function () {
     TemplateFormV2Component.prototype.submitUser = function (form) {
         console.log(form.value, form.valid);
     };
-    TemplateFormV2Component = __decorate([
-        core_1.Component({
-            selector: 'two-way-binding-form-v2',
-            templateUrl: './app/template-form_v2.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TemplateFormV2Component);
     return TemplateFormV2Component;
 }());
+TemplateFormV2Component = __decorate([
+    core_1.Component({
+        selector: 'two-way-binding-form-v2',
+        templateUrl: './app/template-form_v2.component.html'
+    }),
+    __metadata("design:paramtypes", [])
+], TemplateFormV2Component);
 exports.TemplateFormV2Component = TemplateFormV2Component;
 //# sourceMappingURL=template-form_v2.component.js.map

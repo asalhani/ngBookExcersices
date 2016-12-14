@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var contact_1 = require('./contact');
+var core_1 = require("@angular/core");
+var contact_1 = require("./contact");
 var TemplateFormComponent = (function () {
     function TemplateFormComponent() {
     }
@@ -25,14 +25,14 @@ var TemplateFormComponent = (function () {
         this.newContact =
             new contact_1.Contact('', '', '', 0);
     };
-    TemplateFormComponent = __decorate([
-        core_1.Component({
-            selector: 'two-way-binding-form',
-            templateUrl: './app/template-form.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TemplateFormComponent);
     return TemplateFormComponent;
 }());
+TemplateFormComponent = __decorate([
+    core_1.Component({
+        selector: 'two-way-binding-form',
+        templateUrl: './app/template-form.component.html'
+    }),
+    __metadata("design:paramtypes", [])
+], TemplateFormComponent);
 exports.TemplateFormComponent = TemplateFormComponent;
 //# sourceMappingURL=template-form.component.js.map
