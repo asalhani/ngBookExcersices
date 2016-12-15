@@ -9,7 +9,7 @@ import { Hero } from './hero';
 @Component({
     selector: "my-hero-detail",
     templateUrl: "./app/hero-detail.component.html",
-    styleUrls:['./app/hero-detail.component.css']
+    styleUrls: ['./app/hero-detail.component.css']
 })
 export class HeroDetailsComponent implements OnInit {
     @Input() hero: Hero;
@@ -35,11 +35,15 @@ export class HeroDetailsComponent implements OnInit {
         */
 
         this.route.params
-            .switchMap((params :Params) => this.heroService.getHero(+params['id']))
+            .switchMap((params: Params) => this.heroService.getHero(+params['id']))
             .subscribe(hero => this.hero = hero);
     }
 
-    goBack():void{
+    save(): void {
+        this.heroService.update(this.hero)
+            .then(() => this.goBack());
+    }
+    goBack(): void {
         this.location.back();
     }
 };
