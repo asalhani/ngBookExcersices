@@ -1,0 +1,28 @@
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
+        [class.selected]="hero === selectedHero">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>  
+<!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
+
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+
+
+<!--
+<h1><label> selected car: </label> </h1>{{car}}   
+<div>
+    <select [(ngModel)]="car">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+</div>
+-->
