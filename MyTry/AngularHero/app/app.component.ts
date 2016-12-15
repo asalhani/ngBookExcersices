@@ -24,7 +24,7 @@ export class AppComponent {
   ];
   heroes = this.HEROES;
 
-  selectedHero = new Hero(-1, "");
+  selectedHero: Hero;
 
   onSelect(selectedHero: Hero){
     this.selectedHero = selectedHero;
